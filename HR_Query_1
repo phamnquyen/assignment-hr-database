@@ -1,0 +1,30 @@
+use HR;
+
+-- List all employees whose salary is greater than 10,000, sorted from highest to lowest salary.
+select id, first_name, last_name, salary
+from employee
+where salary > 10000
+order by salary DESC;
+
+-- List all departments located in the state "Hanoi".
+select D.id, D.name, L.state
+from location L
+	,department D
+where L.id = D.location_id
+and L.state = "Ha Noi";
+
+-- List all employees who have two or more job history records
+select E.id, E.first_name, E.last_name, 
+        count(JH.employee_id) as job_history_count
+from employee E, job_history JH
+where E.id = JH.employee_id
+group by E.id, E.first_name, E.last_name
+having count(JH.employee_id) >= 2;
+
+-- List all employees who have worked in two or more departments
+select E.id, E.first_name, E.last_name, 
+        count(distinct JH.department_id) as department_count
+from employee E, job_history JH
+where E.id = JH.employee_id
+group by E.id, E.first_name, E.last_name
+having count(distinct JH.department_id) >= 2;
