@@ -12,15 +12,8 @@ This project implements a comprehensive HR database schema using MySQL. It inclu
 ## Tables Created
 Write a DDL file to create the HR database and all associated tables based on the diagram below:
 ![HR Diagram](HR_Diagram.png)
-1. region
-2. country
-3. location
-4. department
-5. job
-6. employee
-7. job_history
 
-### Data Inserted
+## Data Inserted
 
 - 2 regions  
 - 3 countries  
