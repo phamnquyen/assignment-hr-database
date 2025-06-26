@@ -10,7 +10,7 @@ This project implements a comprehensive HR database schema using MySQL. It inclu
 - **Concepts:** Primary & Foreign Keys, Constraints, Joins, Aggregations
 
 ## Tables Created
-Write a DDL file to create the HR database and all associated tables based on Diagram below:
+Write a DDL file to create the HR database and all associated tables based on the diagram below:
 ![HR Diagram](HR_Diagram.png)
 1. region
 2. country
